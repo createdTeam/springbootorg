@@ -1,0 +1,46 @@
+#JDBC����
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/integrator?useUnicode=true&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT
+      username: root
+      password: 123456
+      #���ӳ�����,���ó�ʼ����С����С�����
+      initial-size: 2
+      max-active: 20
+      min-idle: 2
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      max-open-prepared-statements: 20
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 90000
+      filters: stat,wall,slf4j
+      async-init: true
+      #�������
+      filter:
+        slf4j:
+          enabled: true
+          statement-prepare-after-log-enabled: false
+          statement-create-after-log-enabled: false
+          connection-close-after-log-enabled: false
+          result-set-open-after-log-enabled: false
+          result-set-close-after-log-enabled: false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #����web-stat-filter(Ϊ�˰�ȫ������)
+  #���������ļ�
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  ##ɨ��ӿ�ʵ�ֵ�xml
+  mapper-locations: classpath:mapper/*.xml
+  ##����
+  type-aliases-package: com.springboot.dubbo.model.entity
+
+server:
+  port: 8088
