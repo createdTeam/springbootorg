@@ -84,6 +84,13 @@
             <version>1.2.5</version>
         </dependency>
 
+        <!-- IdWorker -->
+        <dependency>
+            <groupId>com.sohu</groupId>
+            <artifactId>idcenter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
