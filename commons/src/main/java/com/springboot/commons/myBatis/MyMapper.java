@@ -1,4 +1,4 @@
-package mybatis;
+package com.springboot.commons.myBatis;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

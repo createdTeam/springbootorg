@@ -11,7 +11,7 @@
         <property name="javaFileEncoding" value="UTF-8"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="projects.commons.mybatis.MyMapper"/>
+            <property name="mappers" value="projects.commons.com.springboot.commons.myBatis.MyMapper"/>
             <!--<property name="beginningDelimiter" value="`"/>
             <property name="endingDelimiter" value="`"/>-->
             <property name="swagger2" value="true"/>

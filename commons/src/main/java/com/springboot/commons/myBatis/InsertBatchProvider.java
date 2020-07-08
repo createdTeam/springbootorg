@@ -1,4 +1,4 @@
-package mybatis;
+package com.springboot.commons.myBatis;
 
 import org.apache.ibatis.mapping.MappedStatement;
 import tk.mybatis.mapper.entity.EntityColumn;
