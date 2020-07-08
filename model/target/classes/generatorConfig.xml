@@ -7,7 +7,7 @@
     <classPathEntry
             location="D:/apache-maven-3.6.1/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar"/>
 
-    <context id="MySqlContext" targetRuntime="MyBatis3">
+    <context id="MySqlContext" targetRuntime="MyBatis3Simple">
         <property name="javaFileEncoding" value="UTF-8"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">

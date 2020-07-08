@@ -1,10 +1,20 @@
 package com.springboot.dubbo.model.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "sys_user")
-public class SysUser {
+public class SysUser implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    public SysUser(Long id,String nickName)
+    {
+        this.id = id;
+        this.nickName = nickName;
+    }
+
     @Id
     @GeneratedValue(generator = "JDBC")
     private Long id;
@@ -12,8 +22,10 @@ public class SysUser {
     @Column(name = "nick_name")
     private String nickName;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "email")
     private String email;
 
     @Column(name = "is_on_line")
@@ -28,6 +40,7 @@ public class SysUser {
     @Column(name = "delete_time")
     private Date deleteTime;
 
+    @Column(name = "start")
     private Integer start;
 
     @Column(name = "publish_date")

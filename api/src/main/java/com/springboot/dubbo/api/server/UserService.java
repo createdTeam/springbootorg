@@ -14,4 +14,6 @@ import java.util.List;
 public interface UserService {
 
     List<SysUser> list(SysUser sysUser);
+
+    int addSysUser();
 }

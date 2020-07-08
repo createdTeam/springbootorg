@@ -1,9 +1,7 @@
 package com.springboot.dubbo.server.controller;
 
-import com.springboot.dubbo.api.response.BaseResponse;
 import com.springboot.dubbo.api.server.UserService;
 import com.springboot.dubbo.model.entity.SysUser;
-import com.springboot.dubbo.model.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +26,11 @@ public class HelloController {
     public List<SysUser> list(SysUser user) {
         List<SysUser> list = userService.list(user);
         return list;
+    }
+
+    @RequestMapping("/add")
+    @ResponseBody
+    public int addSysUser(){
+        return userService.addSysUser();
     }
 }

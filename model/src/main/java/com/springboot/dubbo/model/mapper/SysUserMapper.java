@@ -1,8 +1,8 @@
 package com.springboot.dubbo.model.mapper;
 
 import com.springboot.dubbo.model.entity.SysUser;
-import tk.mybatis.mapper.common.Mapper;
+import mybatis.MyMapper;
 
-public interface SysUserMapper extends Mapper<SysUser> {
+public interface SysUserMapper extends MyMapper<SysUser> {
 
 }
